@@ -49,3 +49,9 @@ docker container inspect 38bf99e5da71
 
 docker container inspect 38bf99e5da71 | grep IPAddress
 
+//подключиться к процесу в контейнере
+docker run -d ngnix
+docker exec -it 38bf99e5da71 bash
+
+//запуск контейнера с указанием своего имени
+docker run -d --name my_nginx nginx
