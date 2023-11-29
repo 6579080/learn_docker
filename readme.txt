@@ -55,3 +55,33 @@ docker exec -it 38bf99e5da71 bash
 
 //запуск контейнера с указанием своего имени
 docker run -d --name my_nginx nginx
+
+//открыть порт  8080 - внешний : 80 - внутренний
+docker run -d -p 8080:80 nginx
+
+http://localhost:8080/
+
+//меппинг томов
+docker run -v ${PWD}:/usr/share/nginx/html nginx
+
+ docker run -v ${PWD}:/usr/share/nginx/html -d -p 8080:80 nginx
+ docker run -v .:/usr/share/nginx/html -d -p 8080:80 nginx
+docker run -v C:\Users\Ulad\WebstormProjects\learn_docker\docker\nginx:/usr/share/nginx/html -d -p 8081:80 nginx
+
+docker exec -it 042ae930914e bash
+ls -la
+cat index.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
