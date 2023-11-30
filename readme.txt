@@ -68,6 +68,9 @@ docker run -v ${PWD}:/usr/share/nginx/html nginx
  docker run -v .:/usr/share/nginx/html -d -p 8080:80 nginx
 docker run -v C:\Users\Ulad\WebstormProjects\learn_docker\docker\nginx:/usr/share/nginx/html -d -p 8081:80 nginx
 
+docker run -v C:\Users\Ulad\WebstormProjects\learn_docker\docker\nginx:/usr/share/nginx/html -d -p 8081:80 nginx
+docker run -v /usr/share/html:/usr/share/nginx/html -d -p 80:80 nginx
+
 docker exec -it 042ae930914e bash
 ls -la
 cat index.html
