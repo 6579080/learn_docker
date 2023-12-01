@@ -61,7 +61,7 @@ docker run -d -p 8080:80 nginx
 
 http://localhost:8080/
 
-//меппинг томов
+//меппинг томовdo
 docker run -v ${PWD}:/usr/share/nginx/html nginx
 
  docker run -v ${PWD}:/usr/share/nginx/html -d -p 8080:80 nginx
@@ -72,11 +72,24 @@ docker exec -it 042ae930914e bash
 ls -la
 cat index.html
 
+//удаление контейнера после завершения
+docker run -it --rm busybox
 
 
+"docker run \
+--name my_nginx \
+-v .:/usr/share/nginx/html \
+-p 8080:80 \
+-d \
+--rm \
+nginx"
 
 
+//попасть в контейнер если он запущен
+docker exec -it 042ae930914e sh
 
+
+docker run -it --name my-node-app my-node
 
 
 
